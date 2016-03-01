@@ -1,4 +1,4 @@
-defmodule IssuesTest do
+defmodule CliTest do
   use ExUnit.Case
   doctest Issues
 
@@ -10,10 +10,10 @@ defmodule IssuesTest do
   end
 
   test "three values reutnred if three given" do
-    assert parse_ars(["user", "project", "99"]) == {"user", "project", 99}
+    assert parse_args(["user", "project", "99"]) == {"user", "project", 99}
   end
 
   test "count is defaulted if two values given" do
-    assert pasre_args(["user", "project"]) == {"user", "project", 4}
+    assert parse_args(["user", "project"]) == {"user", "project", 4}
   end
 end
